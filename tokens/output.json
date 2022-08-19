@@ -9,6 +9,10 @@
     "teal": {
       "value": "#2CC5D2",
       "type": "color"
+    },
+    "gray": {
+      "value": "#D9D9D9",
+      "type": "color"
     }
   }
 }
