@@ -4,5 +4,11 @@
       "value": "global",
       "type": "other"
     }
+  },
+  "color": {
+    "teal": {
+      "value": "#2CC5D2",
+      "type": "color"
+    }
   }
 }
