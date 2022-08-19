@@ -17,3 +17,23 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update Tokens
+  
+  notify:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Pushes test file
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_file: 'test2.md'
+          destination_repo: 'aliasgs/react-demo'
+          destination_folder: 'src/tokens'
+          user_email: 'syd.1991@gmail.com'
+          user_name: 'aliasgs'
+          commit_message: 'A custom message for the commit'
