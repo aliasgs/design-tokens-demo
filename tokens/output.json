@@ -1,18 +1,32 @@
 {
   "tokenSetOrder": {
     "0": {
-      "value": "global",
+      "value": "core",
+      "type": "other"
+    },
+    "1": {
+      "value": "semantic",
       "type": "other"
     }
   },
-  "color": {
-    "teal": {
-      "value": "#2CC5D2",
-      "type": "color"
+  "cds": {
+    "semantic": {
+      "color": {
+        "error": {
+          "value": "#f10303",
+          "type": "color"
+        }
+      }
     },
-    "gray": {
-      "value": "#dfdfdf",
-      "type": "color"
+    "core": {
+      "color": {
+        "red": {
+          "base": {
+            "value": "#f10303",
+            "type": "color"
+          }
+        }
+      }
     }
   }
 }
