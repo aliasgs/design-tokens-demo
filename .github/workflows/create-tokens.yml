@@ -18,14 +18,13 @@ jobs:
         with:
           commit_message: Update Tokens
   
-  notify:
+  copy:
     needs: build
     runs-on: ubuntu-latest
     
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-
     - name: Pushes css file
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
@@ -33,7 +32,7 @@ jobs:
       with:
         source_file: 'tokens/css/variables.css'
         destination_repo: 'aliasgs/react-demo'
-        destination_folder: 'src/tokens'
+        destination_folder: 'src/tokens/'
         user_email: 'syd.1991@gmail.com'
         user_name: 'aliasgs'
         commit_message: 'design tokens css updated!'
