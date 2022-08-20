@@ -12,8 +12,12 @@
   "cds": {
     "semantic": {
       "color": {
-        "error": {
-          "value": "#f10303",
+        "primary": {
+          "value": "#2CC5D2",
+          "type": "color"
+        },
+        "neutral": {
+          "value": "#dedede",
           "type": "color"
         }
       }
@@ -21,10 +25,16 @@
     "core": {
       "color": {
         "red": {
-          "base": {
-            "value": "#f10303",
-            "type": "color"
-          }
+          "value": "#f90000",
+          "type": "color"
+        },
+        "teal": {
+          "value": "#2CC5D2",
+          "type": "color"
+        },
+        "gray": {
+          "value": "#dedede",
+          "type": "color"
         }
       }
     }
