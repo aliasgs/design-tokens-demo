@@ -1,5 +1,5 @@
 {
-  "source": ["data/**/*.json?(c)"],
+  "source": ["data/**/*.json"],
   "platforms": {
     "css": {
       "transformGroup": "css",
