@@ -26,7 +26,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Pushes test file
+    - name: Pushes css file
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
@@ -36,5 +36,17 @@ jobs:
         destination_folder: 'src/tokens'
         user_email: 'syd.1991@gmail.com'
         user_name: 'aliasgs'
-        commit_message: 'design tokens updated!'
+        commit_message: 'design tokens css updated!'
+    
+    - name: Pushes scss file
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'tokens/scss/_variables.scss'
+        destination_repo: 'aliasgs/react-demo'
+        destination_folder: 'src/tokens'
+        user_email: 'syd.1991@gmail.com'
+        user_name: 'aliasgs'
+        commit_message: 'design tokens scss updated!'
 
