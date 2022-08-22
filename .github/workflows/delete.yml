@@ -1,0 +1,18 @@
+# Workflow name
+name: 'delete'
+
+# Event for the workflow
+on: push
+
+# List of jobs
+jobs:
+ 
+  test:    
+    # Operating System
+    runs-on: ubuntu-latest
+    # Job steps
+    steps:
+      - name: Remove File
+      uses: JesseTG/rm@v1.0.3
+      with:
+        path: tokens/css/variables.css
