@@ -19,7 +19,7 @@ jobs:
         with:
           commit_message: Update Tokens
   
-  copy:
+  rename:
     needs: build
     runs-on: ubuntu-latest
     
@@ -30,6 +30,14 @@ jobs:
       run: rm -f tokens/css/variables.css
     - name: Rename file 
       run: mv tokens/css/variables_new.css tokens/css/variables.css
+  
+  copy:
+    needs: rename
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: Pushes css file
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
