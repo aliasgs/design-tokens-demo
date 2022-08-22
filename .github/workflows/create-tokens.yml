@@ -2,7 +2,16 @@ name: CI
 on: [push]
 
 jobs:
+  delete:
+    runs-on: ubuntu-latest      
+    
+    steps:
+      - uses: JesseTG/rm@v1.0.3
+        with:
+          path: tokens/css/variables.css
+          
   build:
+    needs: delete
     runs-on: ubuntu-latest      
       
     steps:
