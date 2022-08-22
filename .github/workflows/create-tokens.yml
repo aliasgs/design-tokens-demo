@@ -19,17 +19,8 @@ jobs:
         with:
           commit_message: Update Tokens
   
-  delete:
-    runs-on: ubuntu-latest     
-    # Job steps
-    steps:
-      - name: Remove File
-        uses: JesseTG/rm@v1.0.3
-        with:
-         path: tokens/css/variables.css
-  
   copy:
-    needs: delete
+    needs: build
     runs-on: ubuntu-latest
     
     steps:
