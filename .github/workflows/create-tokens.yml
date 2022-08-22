@@ -2,24 +2,16 @@ name: CI
 on: [push]
 
 jobs:
-  delete:
-    runs-on: ubuntu-latest      
 
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Rename file 
-        run: mv tokens/css/va.css tokens/css/va_new.css
-
-      - name: Delete file 
-        run: rm -f tokens/css/va.css
-        
   build:
-    needs: delete
     runs-on: ubuntu-latest      
       
     steps:
       - uses: actions/checkout@v2
+      - name: Rename file 
+        run: mv tokens/css/va.css tokens/css/va_new.css
+      - name: Delete file 
+        run: rm -f tokens/css/va.css
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.4.0
       # Transform Figma Tokens JSON to something Style Dictionary can read
