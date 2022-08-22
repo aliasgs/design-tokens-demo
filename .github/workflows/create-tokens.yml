@@ -22,14 +22,12 @@ jobs:
   rename:
     needs: build
     runs-on: ubuntu-latest
-    
+      
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Delete file
-      run: rm -f tokens/css/variables.css
-    - name: Rename file 
-      run: mv tokens/css/variables_new.css tokens/css/variables.css
+      - uses: actions/checkout@v2
+
+      - name: Rename file 
+        run: mv tokens/css/variables_new.css tokens/css/variables.css
   
   copy:
     needs: rename
