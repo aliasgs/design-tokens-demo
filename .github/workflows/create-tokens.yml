@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: JesseTG/rm@v1.0.3
         with:
-          path: tokens/css/variables.css
+          path: tokens/css/va.css
           
   build:
     needs: delete
