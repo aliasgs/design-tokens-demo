@@ -19,18 +19,17 @@ jobs:
         with:
           commit_message: Update Tokens
   
-  rename:
-    needs: build
-    runs-on: ubuntu-latest
-      
+  delete:
+    runs-on: ubuntu-latest     
+    # Job steps
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Rename file 
-        run: mv tokens/css/variables_new.css tokens/css/variables.css
+      - name: Remove File
+        uses: JesseTG/rm@v1.0.3
+        with:
+         path: tokens/css/variables.css
   
   copy:
-    needs: rename
+    needs: delete
     runs-on: ubuntu-latest
     
     steps:
