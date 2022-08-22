@@ -9,9 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Rename file 
-        run: mv tokens/css/variables.css tokens/css/variables_old.css
+        run: mv tokens/css/variables_new.css tokens/css/variables_old.css
       - name: Delete file 
-        run: rm -f tokens/css/variables.css
+        run: rm -f tokens/css/variables_new.css
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.4.0
       # Transform Figma Tokens JSON to something Style Dictionary can read
@@ -35,7 +35,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: 'tokens/css/variables.css'
+        source_file: 'tokens/css/variables_new.css'
         destination_repo: 'aliasgs/react-demo'
         destination_folder: 'src/tokens/'
         user_email: 'syd.1991@gmail.com'
