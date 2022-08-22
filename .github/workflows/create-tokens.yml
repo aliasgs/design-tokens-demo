@@ -9,9 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Rename file 
-        run: mv tokens/css/va.css tokens/css/va_new.css
+        run: mv tokens/css/variables.css tokens/css/variables_old.css
       - name: Delete file 
-        run: rm -f tokens/css/va.css
+        run: rm -f tokens/css/variables.css
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.4.0
       # Transform Figma Tokens JSON to something Style Dictionary can read
