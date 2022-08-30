@@ -13,7 +13,7 @@
     "semantic": {
       "color": {
         "primary": {
-          "value": "#2CC5D2",
+          "value": "#56ddea",
           "type": "color"
         },
         "neutral": {
@@ -29,7 +29,7 @@
           "type": "color"
         },
         "teal": {
-          "value": "#2CC5D2",
+          "value": "#56ddea",
           "type": "color"
         },
         "gray": {
